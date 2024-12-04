@@ -4,7 +4,29 @@
         <title>Creatures - JS Data Attributes Example</title>
 
         <style>
+            html {
+            background-color: #2c0b0b00;
+            width: 100%;  /* Ensure the body takes full width */
+            margin: 0; /* Remove any margin around body and html */
+            padding: 0; /* Remove any padding around body and html */
+            border-radius: 0;
             
+            body {
+                max-width: 960px;
+                margin: 0 auto;
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border: 5px solid rgb(43, 8, 8);
+                border-radius: 8px;
+                margin-bottom: 20px;
+                margin-top: 20px;
+                box-shadow: 0 0 12px;
+                background-color: #f5ebeb;
+                
+            }
+}
             div.creature{
                 padding:5px;
                 border:2px solid black;
@@ -20,6 +42,18 @@
     
             }
 
+
+            button{
+
+                font-weight: 600;
+
+            }
+
+            button:hover{
+
+                background-color: rgb(238, 210, 173);
+            }
+
 /*
             div.creature {
 
@@ -33,27 +67,27 @@
     </head>   
     <body>
     <h1>Creatures</h1>
-    <h3>A JavaScript data attributes example by NAME HERE</h3>
+    <h3>A JavaScript data attributes example by Andrei Novozhilov</h3>
     <p>This page demonstrates how to use JavaScript data attributes to differentiate data.</p>
     <p>When you click <b>Show Creature Home</b>, the background color will change color based on their natural environment:
     </p> 
     <div>
         <ul>
-            <li>land: green</li>
-            <li>water: blue</li>
-            <li>air: yellow</li>
+            <li>Land: green</li>
+            <li>Water: blue</li>
+            <li>Air: yellow</li>
         </ul>
     </div>
 
     <p>When you click <b>Show Creature Type</b>, the border color and style will changed based on the type of creature:</p>
     <div> 
         <ul>
-            <li>animal: solid red</li>
-            <li>insect: dashed orange</li>
+            <li>Animal: solid red</li>
+            <li>Insect: dashed orange</li>
         </ul>
     </div>
 
-
+    <div class="creature-container">
     <div class="creature" data-home="land" data-creature-type="animal">    
         <img src="images/monkey.png" alt="monkey">
         <h3>Monkey</h3>
@@ -91,7 +125,8 @@
         <img src="images/stinkbug.png" alt="stinkbug">
         <h3>Stink Bug</h3>
         <p>Stinkbugs are not cool!  Don't touch them!</p>
-    </div>    
+    </div>  
+    </div>  
         
     <p>
         <button onclick="showHome()">Show Creature Home</button> 
@@ -156,10 +191,10 @@
                 switch(myType) {
 
                     case "animal":
-                        myNodeList[x].style.border = "2px solid red";
+                        myNodeList[x].style.border = "5px solid red";
                     break;  
                     case "insect":
-                        myNodeList[x].style.border = "2px dashed orange";
+                        myNodeList[x].style.border = "5px dashed orange";
                     break;     
    
                 }
